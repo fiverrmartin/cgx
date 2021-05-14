@@ -47,10 +47,10 @@ ALTER TABLE genre ADD CONSTRAINT pk_genre PRIMARY KEY (id_genre);
 ALTER TABLE genre ADD CONSTRAINT uc_genre_name UNIQUE (name);
 
 CREATE TABLE play_to_earn (
-    id_p2e SERIAL NOT NULL,
+    id_pte SERIAL NOT NULL,
     name VARCHAR(60) NOT NULL
 );
-ALTER TABLE play_to_earn ADD CONSTRAINT pk_play_to_earn PRIMARY KEY (id_p2e);
+ALTER TABLE play_to_earn ADD CONSTRAINT pk_play_to_earn PRIMARY KEY (id_pte);
 ALTER TABLE play_to_earn ADD CONSTRAINT uc_play_to_earn_name UNIQUE (name);
 
 CREATE TABLE game_blockchain (
@@ -72,10 +72,10 @@ CREATE TABLE genre_game (
 ALTER TABLE genre_game ADD CONSTRAINT pk_genre_game PRIMARY KEY (id_genre, id_game);
 
 CREATE TABLE play_to_earn_game (
-    id_p2e INTEGER NOT NULL,
+    id_pte INTEGER NOT NULL,
     id_game INTEGER NOT NULL
 );
-ALTER TABLE play_to_earn_game ADD CONSTRAINT pk_play_to_earn_game PRIMARY KEY (id_p2e, id_game);
+ALTER TABLE play_to_earn_game ADD CONSTRAINT pk_play_to_earn_game PRIMARY KEY (id_pte, id_game);
 
 ALTER TABLE game_blockchain ADD CONSTRAINT fk_game_blockchain_game FOREIGN KEY (id_game) REFERENCES game (id_game) ON DELETE CASCADE;
 ALTER TABLE game_blockchain ADD CONSTRAINT fk_game_blockchain_blockchain FOREIGN KEY (id_blockchain) REFERENCES blockchain (id_blockchain) ON DELETE CASCADE;
@@ -86,5 +86,5 @@ ALTER TABLE game_device ADD CONSTRAINT fk_game_device_device FOREIGN KEY (id_dev
 ALTER TABLE genre_game ADD CONSTRAINT fk_genre_game_genre FOREIGN KEY (id_genre) REFERENCES genre (id_genre) ON DELETE CASCADE;
 ALTER TABLE genre_game ADD CONSTRAINT fk_genre_game_game FOREIGN KEY (id_game) REFERENCES game (id_game) ON DELETE CASCADE;
 
-ALTER TABLE play_to_earn_game ADD CONSTRAINT fk_play_to_earn_game_play_to_ea FOREIGN KEY (id_p2e) REFERENCES play_to_earn (id_p2e) ON DELETE CASCADE;
+ALTER TABLE play_to_earn_game ADD CONSTRAINT fk_play_to_earn_game_play_to_ea FOREIGN KEY (id_pte) REFERENCES play_to_earn (id_pte) ON DELETE CASCADE;
 ALTER TABLE play_to_earn_game ADD CONSTRAINT fk_play_to_earn_game_game FOREIGN KEY (id_game) REFERENCES game (id_game) ON DELETE CASCADE;
