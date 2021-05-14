@@ -27,6 +27,9 @@ END $$ LANGUAGE plpgsql;
 select restart_sequences();
 
 
+
+
+
 insert into game (name, description, status, nft_support, free_to_play, image) values ('Zaam-Dox', 'mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam', 'presale', false, true, 'http://dummyimage.com/201x100.png/ff4444/ffffff');
 insert into game (name, description, status, nft_support, free_to_play, image) values ('Cardify', 'luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet', 'presale', false, true, 'http://dummyimage.com/100x100.png/cc0000/ffffff');
 insert into game (name, description, status, nft_support, free_to_play, image) values ('Y-find', 'sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien', 'presale', true, false, 'http://dummyimage.com/206x100.png/cc0000/ffffff');
@@ -156,29 +159,35 @@ insert into genre_game(id_game, id_genre) VALUES (20, 1);
 insert into genre_game(id_game, id_genre) VALUES (21, 1);
 
 
-insert into play_to_earn_game(id_game, id_p2e) VALUES (1, 1);
-insert into play_to_earn_game(id_game, id_p2e) VALUES (2, 1);
-insert into play_to_earn_game(id_game, id_p2e) VALUES (4, 1);
-insert into play_to_earn_game(id_game, id_p2e) VALUES (5, 1);
-insert into play_to_earn_game(id_game, id_p2e) VALUES (6, 1);
-insert into play_to_earn_game(id_game, id_p2e) VALUES (7, 1);
-insert into play_to_earn_game(id_game, id_p2e) VALUES (8, 1);
-insert into play_to_earn_game(id_game, id_p2e) VALUES (5, 2);
-insert into play_to_earn_game(id_game, id_p2e) VALUES (7, 2);
-insert into play_to_earn_game(id_game, id_p2e) VALUES (9, 1);
-insert into play_to_earn_game(id_game, id_p2e) VALUES (10, 1);
-insert into play_to_earn_game(id_game, id_p2e) VALUES (11, 1);
-insert into play_to_earn_game(id_game, id_p2e) VALUES (12, 1);
-insert into play_to_earn_game(id_game, id_p2e) VALUES (13, 1);
-insert into play_to_earn_game(id_game, id_p2e) VALUES (14, 1);
-insert into play_to_earn_game(id_game, id_p2e) VALUES (15, 1);
-insert into play_to_earn_game(id_game, id_p2e) VALUES (16, 1);
-insert into play_to_earn_game(id_game, id_p2e) VALUES (17, 1);
-insert into play_to_earn_game(id_game, id_p2e) VALUES (18, 1);
-insert into play_to_earn_game(id_game, id_p2e) VALUES (19, 1);
-insert into play_to_earn_game(id_game, id_p2e) VALUES (20, 1);
-insert into play_to_earn_game(id_game, id_p2e) VALUES (21, 1);
-insert into play_to_earn_game(id_game, id_p2e) VALUES (22, 1);
+insert into play_to_earn_game(id_game, id_pte) VALUES (1, 1);
+insert into play_to_earn_game(id_game, id_pte) VALUES (2, 1);
+insert into play_to_earn_game(id_game, id_pte) VALUES (4, 1);
+insert into play_to_earn_game(id_game, id_pte) VALUES (5, 1);
+insert into play_to_earn_game(id_game, id_pte) VALUES (6, 1);
+insert into play_to_earn_game(id_game, id_pte) VALUES (7, 1);
+insert into play_to_earn_game(id_game, id_pte) VALUES (8, 1);
+insert into play_to_earn_game(id_game, id_pte) VALUES (5, 2);
+insert into play_to_earn_game(id_game, id_pte) VALUES (7, 2);
+insert into play_to_earn_game(id_game, id_pte) VALUES (9, 1);
+insert into play_to_earn_game(id_game, id_pte) VALUES (10, 1);
+insert into play_to_earn_game(id_game, id_pte) VALUES (11, 1);
+insert into play_to_earn_game(id_game, id_pte) VALUES (12, 1);
+insert into play_to_earn_game(id_game, id_pte) VALUES (13, 1);
+insert into play_to_earn_game(id_game, id_pte) VALUES (14, 1);
+insert into play_to_earn_game(id_game, id_pte) VALUES (15, 1);
+insert into play_to_earn_game(id_game, id_pte) VALUES (16, 1);
+insert into play_to_earn_game(id_game, id_pte) VALUES (17, 1);
+insert into play_to_earn_game(id_game, id_pte) VALUES (18, 1);
+insert into play_to_earn_game(id_game, id_pte) VALUES (19, 1);
+insert into play_to_earn_game(id_game, id_pte) VALUES (20, 1);
+insert into play_to_earn_game(id_game, id_pte) VALUES (21, 1);
+insert into play_to_earn_game(id_game, id_pte) VALUES (22, 1);
+
+
+
+
+
+
 
 
 
