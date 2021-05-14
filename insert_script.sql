@@ -1,5 +1,5 @@
 
-/*CREATE or replace FUNCTION clean_tables() RETURNS void AS $$
+CREATE or replace FUNCTION clean_tables() RETURNS void AS $$
 declare
   l_stmt text;
 begin
@@ -25,7 +25,7 @@ BEGIN
   END LOOP;
 END $$ LANGUAGE plpgsql;
 select restart_sequences();
-*/
+
 
 insert into game (name, description, status, nft_support, free_to_play, image) values ('Zaam-Dox', 'mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam', 'presale', false, true, 'http://dummyimage.com/201x100.png/ff4444/ffffff');
 insert into game (name, description, status, nft_support, free_to_play, image) values ('Cardify', 'luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet', 'presale', false, true, 'http://dummyimage.com/100x100.png/cc0000/ffffff');
@@ -79,6 +79,107 @@ insert into device(name) values ('Web');
 
 insert into play_to_earn(name) values ('Crypto');
 insert into play_to_earn(name) values ('NTF');
+
+
+insert into game_blockchain(id_game, id_blockchain) VALUES (1, 1);
+insert into game_blockchain(id_game, id_blockchain) VALUES (2, 1);
+insert into game_blockchain(id_game, id_blockchain) VALUES (4, 1);
+insert into game_blockchain(id_game, id_blockchain) VALUES (5, 1);
+insert into game_blockchain(id_game, id_blockchain) VALUES (6, 1);
+insert into game_blockchain(id_game, id_blockchain) VALUES (7, 1);
+insert into game_blockchain(id_game, id_blockchain) VALUES (8, 1);
+insert into game_blockchain(id_game, id_blockchain) VALUES (9, 1);
+insert into game_blockchain(id_game, id_blockchain) VALUES (10, 1);
+insert into game_blockchain(id_game, id_blockchain) VALUES (11, 1);
+insert into game_blockchain(id_game, id_blockchain) VALUES (8, 2);
+insert into game_blockchain(id_game, id_blockchain) VALUES (9, 3);
+insert into game_blockchain(id_game, id_blockchain) VALUES (10, 4);
+insert into game_blockchain(id_game, id_blockchain) VALUES (11, 5);
+insert into game_blockchain(id_game, id_blockchain) VALUES (12, 3);
+insert into game_blockchain(id_game, id_blockchain) VALUES (13, 4);
+insert into game_blockchain(id_game, id_blockchain) VALUES (14, 4);
+insert into game_blockchain(id_game, id_blockchain) VALUES (15, 5);
+insert into game_blockchain(id_game, id_blockchain) VALUES (16, 6);
+insert into game_blockchain(id_game, id_blockchain) VALUES (17, 5);
+insert into game_blockchain(id_game, id_blockchain) VALUES (18, 5);
+insert into game_blockchain(id_game, id_blockchain) VALUES (19, 6);
+insert into game_blockchain(id_game, id_blockchain) VALUES (20, 5);
+insert into game_blockchain(id_game, id_blockchain) VALUES (21, 5);
+
+
+insert into game_device(id_game, id_device) VALUES (1, 1);
+insert into game_device(id_game, id_device) VALUES (1, 2);
+insert into game_device(id_game, id_device) VALUES (1, 3);
+insert into game_device(id_game, id_device) VALUES (2, 1);
+
+insert into game_device(id_game, id_device) VALUES (4, 1);
+insert into game_device(id_game, id_device) VALUES (5, 2);
+insert into game_device(id_game, id_device) VALUES (6, 3);
+insert into game_device(id_game, id_device) VALUES (7, 2);
+insert into game_device(id_game, id_device) VALUES (8, 3);
+insert into game_device(id_game, id_device) VALUES (10, 1);
+insert into game_device(id_game, id_device) VALUES (11, 1);
+insert into game_device(id_game, id_device) VALUES (12, 1);
+insert into game_device(id_game, id_device) VALUES (13, 1);
+insert into game_device(id_game, id_device) VALUES (14, 1);
+insert into game_device(id_game, id_device) VALUES (15, 1);
+insert into game_device(id_game, id_device) VALUES (16, 1);
+insert into game_device(id_game, id_device) VALUES (17, 1);
+insert into game_device(id_game, id_device) VALUES (18, 1);
+insert into game_device(id_game, id_device) VALUES (19, 1);
+insert into game_device(id_game, id_device) VALUES (20, 1);
+insert into game_device(id_game, id_device) VALUES (21, 1);
+
+
+
+insert into genre_game(id_game, id_genre) VALUES (1, 1);
+insert into genre_game(id_game, id_genre) VALUES (1, 2);
+insert into genre_game(id_game, id_genre) VALUES (1, 3);
+insert into genre_game(id_game, id_genre) VALUES (2, 1);
+
+insert into genre_game(id_game, id_genre) VALUES (4, 1);
+insert into genre_game(id_game, id_genre) VALUES (5, 2);
+insert into genre_game(id_game, id_genre) VALUES (6, 3);
+insert into genre_game(id_game, id_genre) VALUES (7, 2);
+insert into genre_game(id_game, id_genre) VALUES (8, 3);
+insert into genre_game(id_game, id_genre) VALUES (10, 1);
+insert into genre_game(id_game, id_genre) VALUES (11, 1);
+insert into genre_game(id_game, id_genre) VALUES (12, 1);
+insert into genre_game(id_game, id_genre) VALUES (13, 1);
+insert into genre_game(id_game, id_genre) VALUES (14, 1);
+insert into genre_game(id_game, id_genre) VALUES (15, 1);
+insert into genre_game(id_game, id_genre) VALUES (16, 1);
+insert into genre_game(id_game, id_genre) VALUES (17, 1);
+insert into genre_game(id_game, id_genre) VALUES (18, 1);
+insert into genre_game(id_game, id_genre) VALUES (19, 1);
+insert into genre_game(id_game, id_genre) VALUES (20, 1);
+insert into genre_game(id_game, id_genre) VALUES (21, 1);
+
+
+insert into play_to_earn_game(id_game, id_p2e) VALUES (1, 1);
+insert into play_to_earn_game(id_game, id_p2e) VALUES (2, 1);
+insert into play_to_earn_game(id_game, id_p2e) VALUES (4, 1);
+insert into play_to_earn_game(id_game, id_p2e) VALUES (5, 1);
+insert into play_to_earn_game(id_game, id_p2e) VALUES (6, 1);
+insert into play_to_earn_game(id_game, id_p2e) VALUES (7, 1);
+insert into play_to_earn_game(id_game, id_p2e) VALUES (8, 1);
+insert into play_to_earn_game(id_game, id_p2e) VALUES (5, 2);
+insert into play_to_earn_game(id_game, id_p2e) VALUES (7, 2);
+insert into play_to_earn_game(id_game, id_p2e) VALUES (9, 1);
+insert into play_to_earn_game(id_game, id_p2e) VALUES (10, 1);
+insert into play_to_earn_game(id_game, id_p2e) VALUES (11, 1);
+insert into play_to_earn_game(id_game, id_p2e) VALUES (12, 1);
+insert into play_to_earn_game(id_game, id_p2e) VALUES (13, 1);
+insert into play_to_earn_game(id_game, id_p2e) VALUES (14, 1);
+insert into play_to_earn_game(id_game, id_p2e) VALUES (15, 1);
+insert into play_to_earn_game(id_game, id_p2e) VALUES (16, 1);
+insert into play_to_earn_game(id_game, id_p2e) VALUES (17, 1);
+insert into play_to_earn_game(id_game, id_p2e) VALUES (18, 1);
+insert into play_to_earn_game(id_game, id_p2e) VALUES (19, 1);
+insert into play_to_earn_game(id_game, id_p2e) VALUES (20, 1);
+insert into play_to_earn_game(id_game, id_p2e) VALUES (21, 1);
+insert into play_to_earn_game(id_game, id_p2e) VALUES (22, 1);
+
 
 
 
